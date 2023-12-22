@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "5f5006fd-855b-4b1e-a505-fd910692a3ef",
+		"name": "Kotlin Product Service API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4982348"
+	},
+	"item": [
+		{
+			"name": "Create a Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"master\",\r\n    \"options\": [\r\n        {\r\n            \"name\": \"blue\",\r\n            \"price\": 500\r\n        },\r\n        {\r\n            \"name\": \"red\",\r\n            \"price\": 200\r\n        },\r\n                {\r\n            \"name\": \"blue\",\r\n            \"price\": 500\r\n        },\r\n        {\r\n            \"name\": \"green\",\r\n            \"price\": 100\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get product by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search product by term",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/searchapi?searchTerm=siomai",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"searchapi"
+					],
+					"query": [
+						{
+							"key": "searchTerm",
+							"value": "siomai"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by term with complete details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/combinedsearch?searchTerm=master",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"combinedsearch"
+					],
+					"query": [
+						{
+							"key": "searchTerm",
+							"value": "master"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
